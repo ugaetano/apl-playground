@@ -77,7 +77,7 @@ function inflateDocument(handlerInput, layoutToInflate)
     if (isExported(layoutToInflate))
     {
         doc = documentObject.document
-        res = documentObject.datasources
+        data = documentObject.datasources
         speakOutput = "Rendering " + layoutToInflate
     }
     
