@@ -1,0 +1,40 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "1.4",
+        "settings": {},
+        "theme": "dark",
+        "import": [],
+        "resources": [],
+        "styles": {},
+        "onMount": [],
+        "graphics": {},
+        "commands": {},
+        "layouts": {},
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "items": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "Text",
+                            "text": "${data}"
+                        }
+                    ],
+                    "data": "${payload.data.values}"
+                }
+            ]
+        }
+    },
+    "datasources": {
+        "data": {
+            "values": [
+                "Hello from Gaetano!"
+            ]
+        }
+    },
+    "sources": {}
+}

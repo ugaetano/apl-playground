@@ -1,0 +1,45 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "a. p. l. playground",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "backToSelectionIntent",
+          "slots": [],
+          "samples": [
+            "back",
+            "selection",
+            "back to selection"
+          ]
+        },
+        {
+          "name": "executeCommandIntent",
+          "slots": [],
+          "samples": [
+            "commands",
+            "execute",
+            "fire"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "11"
+}

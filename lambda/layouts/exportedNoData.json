@@ -1,0 +1,27 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "1.4",
+        "settings": {},
+        "theme": "dark",
+        "import": [],
+        "resources": [],
+        "styles": {},
+        "onMount": [],
+        "graphics": {},
+        "commands": {},
+        "layouts": {},
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "items": [
+                {
+                                    "type": "Text",
+                                    "text": "This layout has been exported but datasources are empty"
+                    }
+            ]
+        }
+    },
+    "datasources": {}
+}

@@ -1,0 +1,213 @@
+{
+    "type": "APL",
+    "version": "1.4",
+    "settings": {
+        "idleTimeout": 120000
+    },
+    "theme": "dark",
+    "import": [],
+    "resources": [],
+    "styles": {
+        "sequenceItem": {
+            "description": "Style for sequence items, needed for radio-button behavior.",
+            "values": [
+                {
+                    "color": "white"
+                },
+                {
+                    "when": "${state.checked}",
+                    "color": "#00CAFF"
+                },
+                {
+                    "fontSize": "2.5vw"
+                }
+            ]
+        }
+    },
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "direction": "row",
+                "item": [
+                    {
+                        "type": "Image",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "source": "https://skills-ugaetano.s3-eu-west-1.amazonaws.com/apl-playground/logo.png",
+                        "scale": "best-fit",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Container",
+                        "width": "35vw",
+                        "height": "100vh",
+                        "item": [
+                            {
+                                "type": "Container",
+                                "height": "10vh",
+                                "item": [
+                                    {
+                                        "type": "Text",
+                                        "width": "35vw",
+                                        "height": "10vh",
+                                        "textAlign": "center",
+                                        "fontSize": "3vw",
+                                        "fontStyle": "italic",
+                                        "text": "Choose a layout:",
+                                        "textAlignVertical": "center",
+                                        "fontWeight": "bold"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Frame",
+                                "width": "35vw",
+                                "height": "3px",
+                                "backgroundColor": "white"
+                            },
+                            {
+                                "type": "Sequence",
+                                "bind": [
+                                    {
+                                        "name": "SelectedItem",
+                                        "value": -1
+                                    }
+                                ],
+                                "width": "35vw",
+                                "height": "80vh",
+                                "data": "${payload.data.values}",
+                                "item": [
+                                    {
+                                        "type": "TouchWrapper",
+                                        "checked": "${index == SelectedItem}",
+                                        "item": [
+                                            {
+                                                "when": "${data}",
+                                                "type": "Text",
+                                                "style": "sequenceItem",
+                                                "inheritParentState": true,
+                                                "text": "${index+1}. ${data}",
+                                                "textAlignVertical": "auto",
+                                                "textAlign": "center"
+                                            },
+                                            {
+                                                "when": "${!data}",
+                                                "type": "Text",
+                                                "text": "no document found.",
+                                                "style": "sequenceItem",
+                                                "inheritParentState": true
+                                            }
+                                        ],
+                                        "onPress": [
+                                            {
+                                                "type": "Sequential",
+                                                "commands": [
+                                                    {
+                                                        "type": "SetValue",
+                                                        "property": "SelectedItem",
+                                                        "value": "${index}"
+                                                    },
+                                                    {
+                                                        "type": "SetValue",
+                                                        "componentId": "fileNameToLoad",
+                                                        "property": "text",
+                                                        "value": "${data}"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "direction": "column"
+                            },
+                            {
+                                "type": "Container",
+                                "height": "10vh",
+                                "item": [
+                                    {
+                                        "type": "TouchWrapper",
+                                        "width": "35vw",
+                                        "onPress": [
+                                            {
+                                                "type": "SendEvent",
+                                                "arguments": [
+                                                    "render"
+                                                ],
+                                                "components": [
+                                                    "fileNameToLoad"
+                                                ]
+                                            }
+                                        ],
+                                        "items": [
+                                            {
+                                                "type": "Container",
+                                                "width": "35vw",
+                                                "item": [
+                                                    {
+                                                        "type": "Frame",
+                                                        "width": "15vw",
+                                                        "item": [
+                                                            {
+                                                                "type": "Text",
+                                                                "id": "loadButton",
+                                                                "width": "15vw",
+                                                                "textAlign": "center",
+                                                                "textAlignVertical": "center",
+                                                                "color": "white",
+                                                                "fontSize": "2.5vw",
+                                                                "text": "Load"
+                                                            }
+                                                        ],
+                                                        "backgroundColor": "black",
+                                                        "borderColor": "white",
+                                                        "borderWidth": "3px"
+                                                    }
+                                                ],
+                                                "alignItems": "center"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "direction": "column"
+                    },
+                    {
+                        "type": "Frame",
+                        "width": "3px",
+                        "height": "100vw",
+                        "backgroundColor": "white"
+                    },
+                    {
+                        "type": "Container",
+                        "width": "65vw",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "id": "rightSideText",
+                                "paddingLeft": "20"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Text",
+                        "id": "fileNameToLoad",
+                        "text": "dummy"
+                    }
+                ]
+            }
+        ]
+    }
+}

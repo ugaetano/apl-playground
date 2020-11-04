@@ -1,0 +1,56 @@
+{
+    "type": "APL",
+    "version": "1.4",
+    "settings": {},
+    "theme": "dark",
+    "import": [],
+    "resources": [],
+    "styles": {},
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "items": [
+                    {
+                        "type": "Pager",
+                        "id": "mainPager",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "data": "${payload.data.values}",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "id": "myContainer",
+                                "width": "100vw",
+                                "height": "100vh",
+                                "items": [
+                                    {
+                                        "type": "Image",
+                                        "width": "100vw",
+                                        "height": "90vh",
+                                        "source": "https://public-us-east-1.s3.amazonaws.com/amazon-logo.png"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "width": "100vw",
+                                        "height": "10vh",
+                                        "text": "${data}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

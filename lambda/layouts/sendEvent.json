@@ -1,0 +1,65 @@
+{
+    "type": "APL",
+    "version": "1.4",
+    "settings": {},
+    "theme": "dark",
+    "import": [],
+    "resources": [],
+    "styles": {},
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "item": [
+                    {
+                                        "type": "Text",
+                                        "id": "mainText",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "text": "Press the button and check CloudWatch",
+                                        "paddingBottom":"20"
+                                    },
+                    {
+                        "type": "TouchWrapper",
+                        "item": [
+                            {
+                                "type": "Frame",
+                                "item": [
+                                    {
+                                        "type": "Text",
+                                        "id": "myText",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "text": "PRESS ME"
+                                    }
+                                ],
+                                "backgroundColor": "blue"
+                            }
+                        ],
+                        "onPress": [
+                            {
+                                "type": "SendEvent",
+                                "arguments": [
+                                    "Greetings SendEvent!"
+                                ],
+                                "components": [
+                                    "myText"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "alignItems": "center",
+                "direction": "column",
+                "justifyContent": "center"
+            }
+        ]
+    }
+}
