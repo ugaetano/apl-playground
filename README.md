@@ -92,7 +92,7 @@ This is useful, for example, to check if a layout is sending the correct argumen
 
 ### Custom ```ExecuteCommands``` directive from an Intent
 
-The skill has custom intent that called ```executeCommandIntent``` will execute an array of APL commands that you will define in the ```index.js```. 
+The skill has custom intent called ```executeCommandIntent``` that will execute an array of APL commands that you will define in the ```index.js```. 
 
 The default one is will send a ```AnimateItem``` command the ```Text``` test component of the default ```exported.json``` layout.
 
