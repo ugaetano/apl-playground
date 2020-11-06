@@ -21,7 +21,10 @@
                     "items": [
                         {
                             "type": "Text",
-                            "text": "${data}"
+                            "id": "mainText",
+                            "text": "${data}",
+                            "textAlign": "center",
+                            "textAlignVertical": "center"
                         }
                     ],
                     "data": "${payload.data.values}"

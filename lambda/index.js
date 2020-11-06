@@ -226,10 +226,36 @@ const executeCommandIntentHandler = {
       
       // Add your JSON commands here
       let customCommandToSend = {
-        "type": "ControlMedia",
-        "componentId": "VideoPlayer",
-        "command": "next"
-    }
+        "type": "AnimateItem",
+        "easing": "ease-in-out",
+        "duration": 1000,
+        "componentId": "mainText",
+        "value": [
+          {
+            "property": "opacity",
+            "to": 1
+          },
+          {
+            "property": "transform",
+            "from": [
+              {
+                "translateY": 0
+              },
+              {
+                "rotate": 360
+              }
+            ],
+            "to": [
+              {
+                "translateY": 250
+              },
+              {
+                "rotate": 0
+              }
+            ]
+          }
+        ]
+}
        
        return handlerInput.responseBuilder
        .speak(speakOutput)
