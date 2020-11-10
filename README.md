@@ -12,7 +12,7 @@ On the LaunchRequest, APL Playground will check the content of the ***lambda/lay
 
 The inferface looks like this:
 <img src="https://skills-ugaetano.s3-eu-west-1.amazonaws.com/apl-playground/interface.png">
-You can choose the layout from the list on left hand side, and then press "Load" to render it.
+You can choose the layout from the list on the left hand side, and then press "Load" to render it.
 
 You can also say "back", to get to the selection screen again.
 
@@ -94,7 +94,7 @@ This is useful, for example, to check if a layout is sending the correct argumen
 
 The skill has custom intent called ```executeCommandIntent``` that will execute an array of APL commands that you will define in the ```index.js```. 
 
-The default one is will send a ```AnimateItem``` command the ```Text``` test component of the default ```exported.json``` layout.
+The default one will send a ```AnimateItem``` command the ```Text``` component of the default ```exported.json``` layout.
 
 
 ### How can I use it?
