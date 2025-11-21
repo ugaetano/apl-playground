@@ -11,7 +11,7 @@ On the LaunchRequest, APL Playground will check the content of the ***lambda/lay
 ### How does it look?
 
 The inferface looks like this:
-<img src="https://skills-ugaetano.s3-eu-west-1.amazonaws.com/apl-playground/interface.png">
+<img src="https://d1k4530fmb2r6w.cloudfront.net/apl-playground/interface.png">
 You can choose the layout from the list on the left hand side, and then press "Load" to render it.
 
 You can also say "back", to get to the selection screen again.
