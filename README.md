@@ -1,5 +1,5 @@
 # APL Playground (beta)
-<img src="https://skills-ugaetano.s3-eu-west-1.amazonaws.com/apl-playground/banner.png">
+<img src="https://d1k4530fmb2r6w.cloudfront.net/apl-playground/banner.png">
 
 ### What's that?
 APL playground is a fully-fledged Alexa skill that lets you render and troubleshoot multiple APL layouts at once.
